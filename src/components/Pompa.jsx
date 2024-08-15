@@ -18,7 +18,7 @@ function Pompa() {
                 <div className="my-auto text-xl leading-5 text-black">
                   Green House 1
                 </div>
-                <img
+                <Image
                   src="/img/greenhouse.png"
                   alt="icon suhu"
                   width={"50px"}
@@ -27,7 +27,7 @@ function Pompa() {
                 />
               </div>
               <div className="shrink-0 h-0.5 mt-2 bg-lime-800 border-2 border-lime-800 border-solid" />
-              <img
+              <Image
                 src="/img/switch-on.png"
                 alt="icon suhu"
                 width={"150px"}
@@ -42,7 +42,7 @@ function Pompa() {
                 <div className="my-auto text-xl leading-5 text-black">
                   Green House 2
                 </div>
-                <img
+                <Image
                   src="/img/greenhouse.png"
                   alt="icon suhu"
                   width={"50px"}
@@ -51,7 +51,7 @@ function Pompa() {
                 />
               </div>
               <div className="shrink-0 h-0.5 mt-2 bg-lime-800 border-2 border-lime-800 border-solid" />
-              <img
+              <Image
                 src="/img/switch-off.png"
                 alt="icon suhu"
                 width={"150px"}
@@ -66,7 +66,7 @@ function Pompa() {
                 <div className="my-auto text-xl leading-5 text-black">
                   Green House 3
                 </div>
-                <img
+                <Image
                   src="/img/greenhouse.png"
                   alt="icon suhu"
                   width={"50px"}
@@ -75,7 +75,7 @@ function Pompa() {
                 />
               </div>
               <div className="shrink-0 h-0.5 mt-2 bg-lime-800 border-2 border-lime-800 border-solid" />
-              <img
+              <Image
                 src="/img/switch-on.png"
                 alt="icon suhu"
                 width={"150px"}
@@ -90,7 +90,7 @@ function Pompa() {
                 <div className="my-auto text-xl leading-5 text-black">
                   Green House 4
                 </div>
-                <img
+                <Image
                   src="/img/greenhouse.png"
                   alt="icon suhu"
                   width={"50px"}
@@ -99,7 +99,7 @@ function Pompa() {
                 />
               </div>
               <div className="shrink-0 h-0.5 mt-2 bg-lime-800 border-2 border-lime-800 border-solid" />
-              <img
+              <Image
                 src="/img/switch-off.png"
                 alt="icon suhu"
                 width={"150px"}
@@ -117,7 +117,7 @@ function Pompa() {
             <div className="self-center my-auto text-xl leading-5 text-black font-bold mb-4">
               GRAFIK STATUS POMPA
             </div>
-            <img
+            <Image
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/16875721bcb69c7855732e2ae445fa5244725b627edc50866c221e65922f5991?apiKey=56720a43f79840e1abfb6fc8af490491&"
               className="w-full aspect-[2.7]"

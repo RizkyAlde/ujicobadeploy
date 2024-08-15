@@ -14,7 +14,7 @@ const Widget = ({ title, imgSrc, value, bgColor }) => (
     style={{ backgroundColor: bgColor }}
   >
     <p className="text-center text-black font-bold mb-2">{title}</p>
-    <img
+    <Image
       src={imgSrc}
       alt={`icon ${title}`}
       width="50px"
@@ -143,7 +143,7 @@ export default function HomePage() {
             <div className="self-center my-auto text-xl leading-5 text-black font-bold">
               GH Condition
             </div>
-            <img
+            <Image
               loading="lazy"
               src="/img/table_suhu.png"
               alt="icon ph tanah"
@@ -156,7 +156,7 @@ export default function HomePage() {
             <div className="self-center my-auto text-xl leading-5 text-black font-bold">
               Overall Condition
             </div>
-            <img
+            <Image
               loading="lazy"
               src="/img/overall.png"
               alt="icon ph tanah"

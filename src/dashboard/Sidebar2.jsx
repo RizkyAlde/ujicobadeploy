@@ -51,7 +51,7 @@ const Sidebar = () => {
         className="flex flex-col items-center"
         style={{ paddingTop: "40px" }} // Menggabungkan margin dan padding menjadi satu
       >
-        <img src="/img/8.png" className="w-16 h-16 mb-2" alt="Logo" />
+        <Image src="/img/8.png" className="w-16 h-16 mb-2" alt="Logo" />
         <span className="text-white text-xl font-semibold">Republik Melon</span>
       </div>
       <div className="flex-grow-1 ml-3 py-4">

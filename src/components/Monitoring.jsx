@@ -107,7 +107,7 @@ export default function MonitoringPage() {
           style={{ backgroundColor: "#FFA62F" }}
         >
           <p className="text-center text-black font-bold mb-2">Suhu</p>
-          <img
+          <Image
             src="/img/temperature.png"
             alt="icon suhu"
             width={"50px"}
@@ -124,7 +124,7 @@ export default function MonitoringPage() {
           <p className="text-center text-black font-bold mb-2">
             Kelembapan Udara
           </p>
-          <img
+          <Image
             src="/img/humidity (2).png"
             alt="icon kelembapan udara"
             width={"50px"}
@@ -141,7 +141,7 @@ export default function MonitoringPage() {
           <p className="text-center text-black font-bold mb-2">
             Intensitas Cahaya
           </p>
-          <img
+          <Image
             src="/img/sunlight (1).png"
             alt="icon intensitas cahaya"
             width={"50px"}
@@ -158,7 +158,7 @@ export default function MonitoringPage() {
           <p className="text-center text-black font-bold mb-2">
             Kelembapan Tanah
           </p>
-          <img
+          <Image
             src="/img/watering.png"
             alt="icon kelembaban tanah"
             width={"50px"}
@@ -173,7 +173,7 @@ export default function MonitoringPage() {
           style={{ backgroundColor: "#FFA62F" }}
         >
           <p className="text-center text-black font-bold mb-2">pH Tanah</p>
-          <img
+          <Image
             src="/img/ph-meter.png"
             alt="icon ph tanah"
             width={"50px"}

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router"; // Import useRouter
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -12,13 +12,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const SidebarMenuItem = ({ href, icon, label, isActive }) => {
+  // Updated handleClick to accept href as an argument
+  const handleClick = (href) => {
+    console.log(`Navigating to: ${href}`);
+  };
+
   return (
     <Link
       href={href}
       className={`text-white text-base font-semibold flex items-center gap-x-3 px-4 py-3 ${
         isActive ? "bg-gray-600/25" : ""
       } hover:bg-gray-400/25 rounded-2xl flex-grow-1 my-2 mr-2`}
-      onClick={handleClick} // Menambahkan margin vertikal di sini
+      onClick={() => handleClick(href)} // Pass href to handleClick
     >
       <FontAwesomeIcon icon={icon} size="lg" />
       {label}
@@ -26,14 +31,9 @@ const SidebarMenuItem = ({ href, icon, label, isActive }) => {
   );
 };
 
-const handleClick = () => {
-  console.log(`Navigating to: ${href}`);
-};
-
 const Sidebar = () => {
-  const router = useRouter(); // Use useRouter hook to access the current route
+  const router = useRouter();
 
-  // Function to check if the current route is the active route
   const isActive = (href) => {
     return router.pathname === href;
   };
@@ -47,7 +47,7 @@ const Sidebar = () => {
       }}
     >
       <div className="flex flex-col items-center">
-        <img
+        <Image
           src="/img/logo.png"
           className="w-20.5 h-20.5 mb-2 mt-5"
           alt="Logo"

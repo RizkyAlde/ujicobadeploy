@@ -104,7 +104,7 @@ function Produksi() {
             <div className="self-center my-auto text-xl leading-5 text-black font-bold">
               PREDIKSI JUMLAH PRODUKSI
             </div>
-            <img
+            <Image
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3e8c3000b412ab0f2b352b838ffa02d70ec58b5bf2a8f3953014a23b4b5e64b6?apiKey=56720a43f79840e1abfb6fc8af490491&"
               className="mt-6 w-full aspect-[1.45] max-md:max-w-full"
@@ -116,7 +116,7 @@ function Produksi() {
             <div className="self-center my-auto text-xl leading-5 text-black font-bold">
               PREDIKSI JUMLAH PRODUKSI
             </div>
-            <img
+            <Image
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/01351868f4dcf0df931bb34ad729e6e938a55dba41d54f95b98f7a87b9dd1671?apiKey=56720a43f79840e1abfb6fc8af490491&"
               className="mt-6 w-full aspect-[0.91] max-md:max-w-full"
