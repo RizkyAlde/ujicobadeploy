@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import {
   LineChart,
   Line,
@@ -10,15 +11,15 @@ import {
 
 const Widget = ({ title, imgSrc, value, bgColor }) => (
   <div
-    className={`flex-1 rounded-2xl p-2 shadow mx-2`}
+    className="flex-1 rounded-2xl p-2 shadow mx-2"
     style={{ backgroundColor: bgColor }}
   >
     <p className="text-center text-black font-bold mb-2">{title}</p>
     <Image
       src={imgSrc}
       alt={`icon ${title}`}
-      width="50px"
-      height="50px"
+      width={50}
+      height={50}
       className="mx-auto mb-2"
     />
     <p className="text-center text-black font-bold mb-2">{value}</p>
@@ -27,15 +28,9 @@ const Widget = ({ title, imgSrc, value, bgColor }) => (
 
 export default function HomePage() {
   return (
-    <div
-      className="flex flex-col min-h-screen"
-      style={{ backgroundColor: "#ECEAE2" }}
-    >
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "#ECEAE2" }}>
       <div className="flex-2 bg-white shadow flex justify-between rounded-tl-2xl rounded-tr-2xl mt-10 md:px-3 mx-4">
-        <p
-          className="font-bold text-2xl pl-3 pt-2"
-          style={{ color: "#336600" }}
-        >
+        <p className="font-bold text-2xl pl-3 pt-2" style={{ color: "#336600" }}>
           AVERAGE
         </p>
       </div>
@@ -71,10 +66,7 @@ export default function HomePage() {
           bgColor="#FFA62F"
         />
       </div>
-      <div
-        className="rounded-bl-2xl rounded-br-2xl mb-5 md:px-3 md:pb-3 mx-4"
-        style={{ backgroundColor: "#FFFFFF" }}
-      >
+      <div className="rounded-bl-2xl rounded-br-2xl mb-5 md:px-3 md:pb-3 mx-4" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="mb-2">
           <p className="text-black font-bold">KETERANGAN:</p>
         </div>
@@ -97,10 +89,7 @@ export default function HomePage() {
       </div>
 
       <div className="flex-2 bg-white shadow flex justify-between rounded-tl-2xl rounded-tr-2xl md:px-3 mx-4">
-        <p
-          className="font-bold text-2xl pl-3 pt-2"
-          style={{ color: "#336600" }}
-        >
+        <p className="font-bold text-2xl pl-3 pt-2" style={{ color: "#336600" }}>
           PERCENTAGE OF IDEAL
         </p>
       </div>
@@ -144,9 +133,10 @@ export default function HomePage() {
               GH Condition
             </div>
             <Image
-              loading="lazy"
               src="/img/table_suhu.png"
               alt="icon ph tanah"
+              width={800} // Atur width sesuai kebutuhan Anda
+              height={550} // Atur height sesuai kebutuhan Anda
               className="mt-3 w-full aspect-[1.45] mx-auto mb-2"
             />
           </div>
@@ -157,9 +147,10 @@ export default function HomePage() {
               Overall Condition
             </div>
             <Image
-              loading="lazy"
               src="/img/overall.png"
               alt="icon ph tanah"
+              width={600} // Atur width sesuai kebutuhan Anda
+              height={550} // Atur height sesuai kebutuhan Anda
               className="mt-3 w-full aspect-[0.91] mx-auto mb-2"
             />
           </div>
