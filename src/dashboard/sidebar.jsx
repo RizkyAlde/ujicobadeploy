@@ -2,17 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faChartLine,
-  faPumpSoap,
-  faBasketShopping,
-  faDesktop,
-  faSignOutAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHome, faChartLine, faPumpSoap, faBasketShopping, faDesktop, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 const SidebarMenuItem = ({ href, icon, label, isActive }) => {
-  // Updated handleClick to accept href as an argument
   const handleClick = (href) => {
     console.log(`Navigating to: ${href}`);
   };
@@ -22,8 +15,8 @@ const SidebarMenuItem = ({ href, icon, label, isActive }) => {
       href={href}
       className={`text-white text-base font-semibold flex items-center gap-x-3 px-4 py-3 ${
         isActive ? "bg-gray-600/25" : ""
-      } hover:bg-gray-400/25 rounded-2xl flex-grow-1 my-2 mr-2`}
-      onClick={() => handleClick(href)} // Pass href to handleClick
+      } hover:bg-gray-400/25 rounded-2xl flex-grow my-2`}
+      onClick={() => handleClick(href)}
     >
       <FontAwesomeIcon icon={icon} size="lg" />
       {label}
@@ -34,9 +27,7 @@ const SidebarMenuItem = ({ href, icon, label, isActive }) => {
 const Sidebar = () => {
   const router = useRouter();
 
-  const isActive = (href) => {
-    return router.pathname === href;
-  };
+  const isActive = (href) => router.pathname === href;
 
   return (
     <div
@@ -46,15 +37,17 @@ const Sidebar = () => {
         background: "linear-gradient(to bottom, #FFC224, #9EFF3D)",
       }}
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center p-5">
         <Image
           src="/img/logo.png"
-          className="w-20.5 h-20.5 mb-2 mt-5"
+          width={82} // Set width directly
+          height={82} // Set height directly
+          className="mb-2"
           alt="Logo"
         />
         <span className="text-white font-bold text-xl">DASHBOARD REPLON</span>
       </div>
-      <div className="flex-grow-1 ml-3 py-4">
+      <div className="flex-grow ml-3 py-4">
         <SidebarMenuItem
           href="/admin/home"
           icon={faHome}
@@ -86,7 +79,7 @@ const Sidebar = () => {
           isActive={isActive("/admin/pompa")}
         />
       </div>
-      <div className="fixed bottom-0 left-0 w-full p-3 mr-2">
+      <div className="fixed bottom-0 left-0 w-full p-3">
         <div className="w-full" style={{ maxWidth: "238px" }}>
           <SidebarMenuItem
             href="/login/landing"

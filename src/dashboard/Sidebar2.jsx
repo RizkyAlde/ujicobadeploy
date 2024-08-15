@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
+import Image from "next/image"; // Mengimpor Image
 import {
   faHome,
   faChartLine,
@@ -13,16 +14,17 @@ import {
 
 const SidebarMenuItem = ({ href, icon, label, isActive, onClick }) => {
   return (
-    <div
-      href={href}
-      className={`text-white text-base font-semibold flex items-center gap-x-3 px-4 py-3 ${
-        isActive ? "bg-gray-600/25" : ""
-      } hover:bg-gray-400/25 rounded-2xl cursor-pointer`}
-      onClick={onClick}
-    >
-      <FontAwesomeIcon icon={icon} size="lg" />
-      {label}
-    </div>
+    <Link href={href} passHref>
+      <div
+        className={`text-white text-base font-semibold flex items-center gap-x-3 px-4 py-3 ${
+          isActive ? "bg-gray-600/25" : ""
+        } hover:bg-gray-400/25 rounded-2xl cursor-pointer`}
+        onClick={onClick}
+      >
+        <FontAwesomeIcon icon={icon} size="lg" />
+        {label}
+      </div>
+    </Link>
   );
 };
 
@@ -51,10 +53,10 @@ const Sidebar = () => {
         className="flex flex-col items-center"
         style={{ paddingTop: "40px" }} // Menggabungkan margin dan padding menjadi satu
       >
-        <Image src="/img/8.png" className="w-16 h-16 mb-2" alt="Logo" />
+        <Image src="/img/8.png" width={64} height={64} className="mb-2" alt="Logo" />
         <span className="text-white text-xl font-semibold">Republik Melon</span>
       </div>
-      <div className="flex-grow-1 ml-3 py-4">
+      <div className="flex-grow ml-3 py-4">
         <SidebarMenuItem
           href="/admin/home" 
           icon={faHome} 
@@ -87,15 +89,12 @@ const Sidebar = () => {
         />
       </div>
       <div className="fixed bottom-0 left-0 w-full p-3">
-        <div
-          className="w-full"
-          style={{ maxWidth: "244px" }}
-        >
+        <div className="w-full" style={{ maxWidth: "244px" }}>
           <SidebarMenuItem
             onClick={handleLogoutClick}
             icon={faSignOutAlt}
             label="Logout"
-            className="ml-3"
+            isActive={false} // Tidak perlu status aktif untuk Logout
           />
         </div>
       </div>

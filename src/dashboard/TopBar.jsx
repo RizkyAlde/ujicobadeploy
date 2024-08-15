@@ -19,11 +19,7 @@ const TopBar = ({ setIsSidebarOpen }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setShow(false); // Sembunyikan TopBar saat menggulir ke bawah
-      } else {
-        setShow(true); // Tampilkan TopBar saat menggulir ke atas
-      }
+      setShow(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
 
@@ -45,12 +41,12 @@ const TopBar = ({ setIsSidebarOpen }) => {
 
   return (
     <div
-      className={`${show ? "fixed" : "hidden"} top-0 left-0 z-30 w-full`}
+      className={`fixed top-0 left-0 z-30 w-full ${show ? "" : "hidden"}`}
       style={{ paddingLeft: "270px" }}
     >
       <div
         className="flex justify-between items-center mt-4 mr-4 py-2 pr-5 pl-6 bg-black rounded-tl-lg"
-        style={{ height: "64px", borderRadius: "8px 8px 8px 8px" }}
+        style={{ height: "64px" }}
       >
         <div className="flex flex-grow items-center">
           <div className="text-md font-bold text-center text-white mr-4">
