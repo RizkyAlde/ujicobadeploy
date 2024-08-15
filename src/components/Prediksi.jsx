@@ -117,7 +117,7 @@ function PrediksiPage() {
         >
           <p className="text-center text-black font-bold mb-2">Suhu</p>
           <Image
-            src="/img/temperature.png"
+            src="/Image/temperature.png"
             alt="icon suhu"
             width={50}
             height={50}
@@ -131,7 +131,7 @@ function PrediksiPage() {
         >
           <p className="text-center text-black font-bold mb-2">Kelembapan Udara</p>
           <Image
-            src="/img/humidity (2).png"
+            src="/Image/humidity (2).png"
             alt="icon kelembapan udara"
             width={50}
             height={50}
@@ -145,7 +145,7 @@ function PrediksiPage() {
         >
           <p className="text-center text-black font-bold mb-2">Intensitas Cahaya</p>
           <Image
-            src="/img/sunlight (1).png"
+            src="/Image/sunlight (1).png"
             alt="icon intensitas cahaya"
             width={50}
             height={50}
@@ -159,7 +159,7 @@ function PrediksiPage() {
         >
           <p className="text-center text-black font-bold mb-2">Kelembapan Tanah</p>
           <Image
-            src="/img/watering.png"
+            src="/Image/watering.png"
             alt="icon kelembaban tanah"
             width={50}
             height={50}
@@ -173,7 +173,7 @@ function PrediksiPage() {
         >
           <p className="text-center text-black font-bold mb-2">pH Tanah</p>
           <Image
-            src="/img/ph-meter.png"
+            src="/Image/ph-meter.png"
             alt="icon ph tanah"
             width={50}
             height={50}

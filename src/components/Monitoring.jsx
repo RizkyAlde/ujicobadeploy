@@ -34,11 +34,11 @@ export default function MonitoringPage() {
       {/* Widgets */}
       <div className="bg-white p-4 shadow-md flex justify-between md:px-3 md:py-3 mx-4 mt-4">
         {[
-          { title: "Suhu", icon: "/img/temperature.png", value: "30°C", color: "#FFA62F" },
-          { title: "Kelembapan Udara", icon: "/img/humidity (2).png", value: "40.2%", color: "#AED260" },
-          { title: "Intensitas Cahaya", icon: "/img/sunlight (1).png", value: "881lux", color: "#FFA62F" },
-          { title: "Kelembapan Tanah", icon: "/img/watering.png", value: "60.8%", color: "#AED260" },
-          { title: "pH Tanah", icon: "/img/ph-meter.png", value: "7 pH", color: "#FFA62F" },
+          { title: "Suhu", icon: "/Image/temperature.png", value: "30°C", color: "#FFA62F" },
+          { title: "Kelembapan Udara", icon: "/Image/humidity (2).png", value: "40.2%", color: "#AED260" },
+          { title: "Intensitas Cahaya", icon: "/Image/sunlight (1).png", value: "881lux", color: "#FFA62F" },
+          { title: "Kelembapan Tanah", icon: "/Image/watering.png", value: "60.8%", color: "#AED260" },
+          { title: "pH Tanah", icon: "/Image/ph-meter.png", value: "7 pH", color: "#FFA62F" },
         ].map((widget, idx) => (
           <div
             key={idx}

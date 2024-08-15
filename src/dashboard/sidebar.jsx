@@ -39,7 +39,7 @@ const Sidebar = () => {
     >
       <div className="flex flex-col items-center p-5">
         <Image
-          src="/img/logo.png"
+          src="/Image/logo.png"
           width={82} // Set width directly
           height={82} // Set height directly
           className="mb-2"
