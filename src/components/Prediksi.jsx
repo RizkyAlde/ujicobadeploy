@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image"; // Pastikan Anda mengimpor Image dari next/image
 import {
   XYPlot,
   LineSeries,
@@ -10,7 +9,6 @@ import {
   MarkSeries,
 } from "react-vis";
 
-// Data
 const dataSuhu = [
   { x: "00:00", y: 25 },
   { x: "01:00", y: 26 },
@@ -80,6 +78,16 @@ function PrediksiGrafik({ data, title }) {
         <HorizontalGridLines />
         <XAxis title="Waktu" />
         <YAxis title="Prediksi" />
+        {/* Tambahkan grid tambahan */}
+        <VerticalGridLines
+          tickValues={["00:00", "06:00", "12:00", "18:00", "23:59"]}
+          style={{ stroke: "rgba(0, 0, 0, 0.2)", strokeWidth: 1 }}
+        />
+        <HorizontalGridLines
+          tickValues={[25, 50, 75]}
+          style={{ stroke: "rgba(0, 0, 0, 0.2)", strokeWidth: 1 }}
+        />
+
         <LineSeries data={data} style={{ stroke: "blue" }} />
         <MarkSeries data={data} />
       </XYPlot>
@@ -90,100 +98,157 @@ function PrediksiGrafik({ data, title }) {
 function PrediksiPage() {
   return (
     <div
-      className="flex flex-col min-h-screen bg-[#ECEAE2]"
+      className="flex flex-col min-h-screen"
+      style={{ backgroundColor: "#ECEAE2" }}
     >
       <p className="text-black font-bold md:px-3 mt-5 md:py-3 mx-3">
         Prediksi Satu Hari Kedepan!
       </p>
       <div
-        className="flex-2 rounded-tl-2xl rounded-tr-2xl p-4 shadow flex justify-between md:px-3 md:py-3 mt-1 mx-4 bg-white"
+        className="flex-2 rounded-tl-2xl rounded-tr-2xl p-4 shadow flex justify-between md:px-3 md:py-3 mt-1 mx-4 "
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         <select
-          className="border border-green-200 rounded-xl p-2 pl-2 cursor-pointer focus:outline-none font-bold focus:border-green-200 bg-[#AED260] text-black"
+          style={{
+            backgroundColor: "#AED260",
+            color: "black",
+            paddingRight: "0.5px",
+          }}
+          className="border border-green-200 rounded-xl p-2 pl-2 cursor-pointer focus:outline-none font-bold focus:border-green-200 "
         >
-          {[...Array(12).keys()].map((i) => (
-            <option key={i} className="bg-[#AED260] text-black">
-              Green House {i + 1}
-            </option>
-          ))}
+          <option
+            className="focus:font-bold"
+            style={{
+              backgroundColor: "#AED260",
+              color: "black",
+            }}
+          >
+            Green House 1
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 2
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 3
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 4
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 5
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 6
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 7
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 8
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 9
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 10
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 11
+          </option>
+          <option style={{ backgroundColor: "#AED260", color: "black" }}>
+            Green House 12
+          </option>
         </select>
       </div>
       <div
         className="flex-2 bg-white p-4 shadow flex justify-between md:px-3 md:py-3 mx-4"
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         {/* Widget 1 */}
         <div
-          className="flex-1 rounded-2xl p-2 shadow mr-2 bg-[#FFA62F]"
+          className="flex-1 rounded-2xl p-2 shadow mr-2"
+          style={{ backgroundColor: "#FFA62F" }}
         >
           <p className="text-center text-black font-bold mb-2">Suhu</p>
-          <Image
-            src="/Image/temperature.png"
+          <img
+            src="/img/temperature.png"
             alt="icon suhu"
-            width={50}
-            height={50}
+            width={"50px"}
+            height={"50px"}
             className="mx-auto mb-2"
           />
           <p className="text-center text-black font-bold mb-2">30 C</p>
         </div>
         {/* Widget 2 */}
         <div
-          className="flex-1 rounded-2xl p-1 shadow mx-2 bg-[#AED260]"
+          className="flex-1 rounded-2xl p-1 shadow mx-2"
+          style={{ backgroundColor: "#AED260" }}
         >
-          <p className="text-center text-black font-bold mb-2">Kelembapan Udara</p>
-          <Image
-            src="/Image/humidity (2).png"
+          <p className="text-center text-black font-bold mb-2">
+            Kelembapan Udara
+          </p>
+          <img
+            src="/img/humidity (2).png"
             alt="icon kelembapan udara"
-            width={50}
-            height={50}
+            width={"50px"}
+            height={"50px"}
             className="mx-auto mb-2"
           />
           <p className="text-center text-black font-bold mb-2">40.2%</p>
         </div>
         {/* Widget 3 */}
         <div
-          className="flex-1 rounded-2xl p-1 shadow mx-2 bg-[#FFA62F]"
+          className="flex-1 rounded-2xl p-1 shadow mx-2"
+          style={{ backgroundColor: "#FFA62F" }}
         >
-          <p className="text-center text-black font-bold mb-2">Intensitas Cahaya</p>
-          <Image
-            src="/Image/sunlight (1).png"
+          <p className="text-center text-black font-bold mb-2">
+            Intensitas Cahaya
+          </p>
+          <img
+            src="/img/sunlight (1).png"
             alt="icon intensitas cahaya"
-            width={50}
-            height={50}
+            width={"50px"}
+            height={"50px"}
             className="mx-auto mb-2"
           />
           <p className="text-center text-black font-bold mb-2">881lux</p>
         </div>
         {/* Widget 4 */}
         <div
-          className="flex-1 rounded-2xl p-1 shadow mx-2 bg-[#AED260]"
+          className="flex-1 rounded-2xl p-1 shadow mx-2"
+          style={{ backgroundColor: "#AED260" }}
         >
-          <p className="text-center text-black font-bold mb-2">Kelembapan Tanah</p>
-          <Image
-            src="/Image/watering.png"
+          <p className="text-center text-black font-bold mb-2">
+            Kelembapan Tanah
+          </p>
+          <img
+            src="/img/watering.png"
             alt="icon kelembaban tanah"
-            width={50}
-            height={50}
+            width={"50px"}
+            height={"50px"}
             className="mx-auto mb-2"
           />
           <p className="text-center text-black font-bold mb-2">60.8%</p>
         </div>
         {/* Widget 5 */}
         <div
-          className="flex-1 rounded-2xl p-1 shadow ml-2 bg-[#FFA62F]"
+          className="flex-1 rounded-2xl p-1 shadow ml-2"
+          style={{ backgroundColor: "#FFA62F" }}
         >
           <p className="text-center text-black font-bold mb-2">pH Tanah</p>
-          <Image
-            src="/Image/ph-meter.png"
+          <img
+            src="/img/ph-meter.png"
             alt="icon ph tanah"
-            width={50}
-            height={50}
+            width={"50px"}
+            height={"50px"}
             className="mx-auto mb-2"
           />
           <p className="text-center text-black font-bold mb-2">7 pH</p>
         </div>
       </div>
       <div
-        className="rounded-bl-2xl rounded-br-2xl mb-4 md:px-3 md:py-3 mx-4 bg-white"
+        className="rounded-bl-2xl rounded-br-2xl mb-4 md:px-3 md:py-3 mx-4"
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="mb-2">
           <p className="text-black font-bold">KETERANGAN:</p>
@@ -191,13 +256,15 @@ function PrediksiPage() {
         <div className="flex items-center">
           <div className="flex items-center">
             <div
-              className="rounded py-3 px-6 shadow mr-2 bg-[#AED260]"
+              className="rounded py-3 px-6 shadow mr-2"
+              style={{ backgroundColor: "#AED260" }}
             ></div>
             <p className="text-black font-bold mr-5">Ideal</p>
           </div>
           <div className="flex items-center">
             <div
-              className="rounded py-3 px-6 shadow mr-2 ml-2 bg-[#FFA62F]"
+              className="rounded py-3 px-6 shadow mr-2 ml-2"
+              style={{ backgroundColor: "#FFA62F" }}
             ></div>
             <p className="text-black font-bold">Tidak Ideal</p>
           </div>
@@ -208,15 +275,18 @@ function PrediksiPage() {
       </p>
       <div
         className="flex-1 rounded-2xl bg-white p-4 shadow mb-2 flex justify-between md:px-3 mb-5 md:py-3 mx-4"
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         <div
-          className="flex-1 rounded-2xl bg-green-300 p-2 shadow mr-2 bg-[#AED260]"
+          className="flex-1 rounded-2xl bg-green-300 p-2 shadow mr-2"
+          style={{ backgroundColor: "#AED260" }}
         >
           {/* Grafik Prediksi Suhu */}
           <PrediksiGrafik data={dataSuhu} title="Grafik Prediksi Suhu" />
         </div>
         <div
-          className="flex-1 rounded-2xl bg-green-300 p-2 shadow mr-2 bg-[#AED260]"
+          className="flex-1 rounded-2xl bg-green-300 p-2 shadow mr-2"
+          style={{ backgroundColor: "#AED260" }}
         >
           {/* Grafik Prediksi Kelembapan Udara */}
           <PrediksiGrafik
